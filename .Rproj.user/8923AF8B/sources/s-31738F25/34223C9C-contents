@@ -1,0 +1,78 @@
+---
+title: "About the maps"
+output: html_document
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Before accessing the maps, a few necessary explanation. You can choose one of the RCP's in the `Map` dropdown to view both absolute and relative change maps for the selected RCP. We also offer high resolution pdf versions of each map to download. However familiarize yourself with the binning concept applied to these maps before.
+Regardless of the RCP, the maps cover only one future time period, 2070-2100.
+Read more on the creation of the data in the [About](about.html) section. 
+
+### About the RCP's
+Representative Concentration Pathways', RCP 2.6, RCP 6.0 and RCP 8.5 are scenarios developed by the Intergovernmental Panel on Climate Change (IPCC) to project future greenhouse gas emissions and resulting changes in temperature and sea level.
+
+RCP 2.6: This scenario assumes very aggressive reductions in greenhouse gas emissions, primarily through the use of renewable energy sources and carbon capture and storage technology. It also assumes significant changes in land use, such as afforestation and reforestation, to sequester carbon. This scenario results in a peak in global greenhouse gas emissions by 2020 and a reduction of about 85% below 2000 levels by 2100.
+
+RCP 6.0: This scenario assumes moderate reductions in greenhouse gas emissions, primarily through the use of renewable energy sources and carbon capture and storage technology. It also assumes a moderate increase in energy efficiency, and some changes in land use to sequester carbon. This scenario results in a peak in global greenhouse gas emissions around 2040 and a reduction of about 35% below 2000 levels by 2100.
+
+RCP 8.5: This scenario assumes very little reduction in greenhouse gas emissions, with no significant changes in energy or land-use policy. It assumes high population growth and a high rate of economic growth, leading to a large increase in energy demand, primarily met by fossil fuels. This scenario results in a continued increase in global greenhouse gas emissions throughout the century, with emissions being about four times higher than in 2000 by 2100.
+
+It's worth noting that these are scenarios, not predictions, and that there is a range of possible outcomes depending on how much and how soon the world takes action to reduce emissions.
+
+
+### Creation of Bins
+
+Due to the large span of values, we created manual bins for the plots presented on this webpage, based on the distribution of the values. 
+The following concept is applied:
+Depending on the distribution take all negative (positive) values and create bins: 
+
+* Bin 1: Percentile 95 - 100
+* Bin 2: Percentile 90 - 95 
+* Bin 3: Percentile 90 - 70
+* Bin 4: Percentile 70 - 50
+* Bin 5: Percentile 50 - 0
+
+Then assign positive (negative) values to the cutoffs of the created bins with turning sign. For the relative change, the bin concept is applied seperately for both negative and positive value. (What does this allow?)
+
+For example, the absolute Change in Calories under RCP 6.0. We bin the negative values according to above concept, and assign positive values to the bins positive cutoff. Note that values are logged _after_ the creation of bins for visualization purposes. 
+
+```{r, include = F}
+
+source("main.R", local = TRUE)
+```
+
+```{r, echo=FALSE, warning=FALSE}
+
+df$log_change <- if_else(df$changecal_rcp6p0 > 0, log(df$changecal_rcp6p0), 
+                         - log(abs(df$changecal_rcp6p0)))
+
+my_color <- cmocean(name = 'curl', direction = -1, clip = 0.1)(11)
+my_color <- my_color[-6]
+sort_values <- sort(unique(round(df$bin_change_rcp6p0)))
+sort_values <- sort_values[-6]
+names(my_color) <- as.character(sort_values)
+ggplot(df, aes(x = log_change, fill = as.character(round(bin_change_rcp6p0)))) +
+  geom_histogram(alpha = 0.7, bins = 200) +
+  scale_fill_manual(values = my_color, name = "Bin",
+                    labels = sort_values)  +
+  labs(x = "Logged Change", 
+       y= "Count", 
+       title = "Making bins based on distribution", 
+       subtitle = "Logged absolute change of calories produced under RCP 6.0") +
+  theme_hc() +
+  theme(
+    plot.title = element_text(hjust = 0.5, color = "#4e4d47"),
+    plot.subtitle = element_text(hjust = 0.5, color = "#4e4d47"))
+```
+
+### Other issues
+
+It is important that the grid of the map is **not** normalized by grid cell area. The spacing of the grid is a constant in degrees, which leads to different sized cells depending on the latitude. 

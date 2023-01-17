@@ -1,0 +1,28 @@
+name: "Sustainability Index"                                
+output_dir: "."
+navbar:
+  title: "Sustainability Index"                            
+  type: inverse
+  right:
+    - text: "Maps"
+      menu: 
+      - text: "Description of the maps"
+        href: map_description.html
+      - text: "RCP 2.6"
+        href: rcp2p6.html 
+      - text: "RCP 6.0"
+        href: rcp6p0.html
+      - text: "RCP 8.5"
+        href: rcp8p5.html
+      - text: "Compare across RCP's"
+        href: compare_rcp.html
+    - text: "About"
+      href: about.html 
+    - text: "Downloads"
+      href: downloads.html
+    
+    
+output:
+  html_document:
+    #theme: spacelab
+    #highlight: textmate
