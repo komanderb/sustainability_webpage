@@ -1,6 +1,11 @@
 ---
 title: "RCP 8.5"
 ---
+```{css, echo=FALSE}
+h1,h2,h3,h4 {
+  text-align: center;
+}
+```
 
 <style>
 body {
@@ -20,18 +25,20 @@ source("leaflet.R", local = TRUE)
 RCP 8.5 is a scenario that assumes very little reduction in greenhouse gas emissions, resulting in a high level of warming and significant sea level rise.
 
 Below you can view the absolute and relative change maps. Check the [Map Description](map_description.html) for information about the creation of the map, especially the creation of the bins. 
-Below the maps you can download a high resolution pdf for each map.
+Note that Change relates to differences between the time period 2070-2100 to today. We express calories in People Fed Yearly (**PFY**)
 
 <br>
 
 ### Absolute Change under RCP 8.5
+<br>
 ```{r, echo = F, warning = F, out.width = "100%"}
 leaflet_function(absolute_tifs[3], "Absolute PFY Change")
 ```
 
 However, cells that have a lot of agricultural production will exhibit large absolute changes even under small relative changes and vice versa. Therefore it is important to simultaneously take the growth rate into account.
 
-
+<br>
 ### Relative Change under RCP 8.5
+<br>
 ```{r, echo = F, warning = F, out.width="100%"}
 leaflet_function(relative_tifs[3], "Growth Rate")

@@ -370,38 +370,36 @@ text-align: justify}
 </style>
 <div id="about-the-project" class="section level2">
 <h2>About the project</h2>
-<p>Some random text describing what we did and why</p>
+<p>Climate change poses serious challenges for agricultural communities all over the world. In this project we use the data provided by the GAEZ project to provide benchmark estimates for the damage done to overall agricultural productivity. This is particularly relevant for low-income regions and communities which will have a hard time adapting to falling productivity through changes in technology or crop type.</p>
+<p>The motivation for this webpage is to provide early warning to local policy makers. We highlight regions and communities which will suffer significant productivity losses under current planting patterns. Adaptation is a crucial aspect for mediating the economic, social and political repercussions of climate change.</p>
+<p>At the same time we hope that this project can contribute to understanding the devastating impact that climate change will have locally and the unequal distribution of its damages. This should inform both efforts of preventing climate change and political negotiations for compensating the losers from the remaining change.</p>
 </div>
 <div id="about-the-data" class="section level2">
 <h2>About the data</h2>
-<p>For a full overview of the methodology, check out the <a href="link">model documentation</a>. Essentially for cell i, we have the harvesting area of crop c under water conditions w (either rainfed or irrigated) denoted as <span class="math inline">\(har_{icw}\)</span>. The data is taken from <a href="https://gaez.fao.org/">GAEZv4</a> for the year 2010. Moreover GAEZv4 provides data on the agro-climatic potential yield for crop <em>c</em> in cell <em>i</em> for today (observed) and future time periods (estimated). For future time periods the estimation/simulation is subject to the assumed climatic conditions of one of the four Relative Concentration Pathways. (Read more about them here). Thus agro-climatic potential yield is defined as <span class="math inline">\(\gamma_{icw}\)</span> for todays production and as <span class="math inline">\(\gamma_{icwst}\)</span> for future production where s denotes the RCP and t the time period.</p>
+<p>For a full overview of the methodology, check out the <a href="downloads.html">model documentation</a>. Essentially for cell i, we have the harvesting area of crop c under water conditions w (either rainfed or irrigated) denoted as <span class="math inline">\(har_{icw}\)</span>. The data is taken from <a href="https://gaez.fao.org/">GAEZv4</a> for the year 2010. Moreover GAEZv4 provides data on the agro-climatic potential yield for crop <em>c</em> in cell <em>i</em> for today (observed) and future time periods (estimated). For future time periods the estimation/simulation is subject to the assumed climatic conditions of one of the four Relative Concentration Pathways. Thus agro-climatic potential yield is defined as <span class="math inline">\(\gamma_{icw}\)</span> for todays production and as <span class="math inline">\(\gamma_{icwst}\)</span> for future production where s denotes the RCP and t the time period.</p>
 <p>In order to compare future scenarios with todays production, we multiply the harvesting area of crop c in cell i with the corresponding agro-climatic yield for crop c in cell i</p>
 <p><span class="math display">\[ \theta_{icwst} = \gamma_{icwst} \times har_{icw} \]</span></p>
-<p>Note that this differs from actual production through yield gaps (read more here). Also the construction of <span class="math inline">\(\theta_{icwst}\)</span> shows the two major assumptions of our approach</p>
+<p>Note that the agro-climatic yield differs from the actual production, widely discussed under yield gaps. Also the construction of <span class="math inline">\(\theta_{icwst}\)</span> shows the two major assumptions of our approach</p>
 <ol style="list-style-type: decimal">
 <li>High Input Management Assumption</li>
 <li>Constant harvesting area, i.e. no crop adaptation</li>
 </ol>
-<p>The first assumption is predetermined by the agro-climatic potential yield data. It assumes high input management (what exactly is that). As this assumptions holds for today’s and future data, it cancels out, allowing a focus on just the changes of climatic conditions. Denoted constant technology in <em>Economic Terms</em> , we assume that the farming technology and agricultural inputs remain the same over time. Highly unrealistic but this allows the focus on the climatic changes.</p>
-<p>The second assumption can be described as <em>no adaptation of crops</em>, i.e. farmers don’t change their set of crops with changing climatic conditions. Theoretically this is a very limiting assumptions, as varying climatic conditions might change in favour to certain crops for specific regions, which make them easier to grow etc.. Yet this again allows to identify regions that <em>will</em> have to adapt the most or benefit the most, as their current composition of harvested crops is unsuitable/suitable.</p>
-<p>Otherwise would need to be integrated into a more complex allocation model.</p>
+<p>The first assumption is predetermined by the agro-climatic potential yield data. It assumes high input management. As this assumptions holds for today’s and future data, it cancels out, allowing a focus on just the changes of climatic conditions and the effect on agricultural productivity. Denoted constant technology in <em>Economic Terms</em> , we assume that the farming technology and agricultural inputs remain the same over time. Highly unrealistic, but this allows the focus on the effect of climatic changes.</p>
+<p>The second assumption can be described as <em>no adaptation of crops</em>, i.e. farmers don’t change their set of crops with changing climatic conditions. Theoretically this is a very limiting assumptions, as varying climatic conditions might change in favor to certain crops for specific regions, which make them easier to grow etc.. Yet this again allows to identify regions that <em>will</em> have to adapt the most or benefit the most, as their current composition of harvested crops is unsuitable/suitable.</p>
 <p>In order to compare cells with different produced crops, we then aggregate crops in each cell by their caloric yield <span class="math inline">\(ca_c\)</span>.</p>
-<p><span class="math display">\[ \theta_{iwst} = \sum_{c = 1}^{C} \theta_{icwst} \times ca_c \]</span> Now we have one measure for each cell, time period and RCP.</p>
+<p><span class="math display">\[ \theta_{iwst} = \sum_{c = 1}^{C} \theta_{icwst} \times ca_c \]</span></p>
 </div>
 <div id="about-the-maps" class="section level2">
 <h2>About the maps</h2>
-<p>The maps (visible here!) show either the absolute change in calories or the growth rate of calories, where calories are expressed in people fed yearly: <span class="math display">\[\frac{\theta_{iwst}}{365 * c_{min}}\]</span> where <span class="math inline">\(c_{min}\)</span> is calories needed per person per day. After summing the water supply types, the change measure <span class="math inline">\(\omega\)</span> is defined as:</p>
+<p>The maps (visible here!) show either the absolute change in calories or the growth rate of calories, where calories are expressed in people fed yearly (PFY): <span class="math display">\[\frac{\theta_{iwst}}{365 * c_{min}}\]</span> where <span class="math inline">\(c_{min}\)</span> is calories needed per person per day. After summing the water supply types, the change measure <span class="math inline">\(\omega\)</span> is defined as:</p>
 <p><span class="math display">\[\omega_{ist} = \theta_{ist} - \theta_{i} \]</span> in the absolute case and <span class="math display">\[\omega_{ist} = \frac{\theta_{ist} - \theta_{i}}{\theta_i} \]</span></p>
-</div>
-<div id="about-us" class="section level2">
-<h2>About Us</h2>
-<p>Describe us</p>
+<p>For this application we set <span class="math inline">\(c_min\)</span> at 2700 calories per person per day.</p>
 </div>
 <div id="useful-links" class="section level2">
 <h2>Useful links</h2>
-<p>As mentioned, most of the data is taken from the GAEZv4. Check out their model documentation for detailed information</p>
-<p>Additionally this paper interesting for gdp, this paper for population</p>
-<p>Calorie Paper here and then maybe global foodsheds</p>
+<p>Most of the data is taken from the <a href="https://gaez.fao.org/">GAEZv4</a>. Check out their model documentation for detailed information</p>
+<p>For the sources of additional data, like caloric conversion of crop types data, consult our model documentation.</p>
+<p><em>Work in Progress</em></p>
 </div>
 
 

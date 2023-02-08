@@ -27,7 +27,8 @@ leaflet_function <- function(file_name, title){
                    opacity = 1,
                    project = FALSE) %>%
     addLegend(pal = pal, values = values(x),
-              title = title)
+              title = title) %>%
+    setView(lng = 0, lat = 10, zoom = 1.5)
   
   return(out_plot)
 }

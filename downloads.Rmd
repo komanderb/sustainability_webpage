@@ -6,6 +6,11 @@ output:
     toc_float: TRUE
   
 ---
+```{css, echo=FALSE}
+h1,h2,h3,h4 {
+  text-align: center;
+}
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -64,7 +69,45 @@ download_link(
 
 ## Maps 
 
-Click below to download one of the high resolution map presented on this site. For more information on the creation of the maps go to the corresponding RCP in the `Maps` section.
+Click below to download one of the high resolution map presented on this site. For more information on the creation of the maps go to the corresponding RCP in the `Maps` section. (Under Construction)
+
+Absolute Changes RCP 2.6
+```{r, echo=FALSE}
+download_link(
+  link = "https://drive.google.com/file/d/1TE0Y-UhQZVh3w2TZ8CCV1Q_9mhAChLFt/view?usp=sharing",
+  button_label = "Map RCP 2.6",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
+
+Absolute Changes RCP 6.0
+
+```{r, echo=FALSE}
+download_link(
+  link = "https://drive.google.com/file/d/1BHdGl7oS4vJpVaWRrzo3qPPRhnFk5rl1/view?usp=sharing",
+  button_label = "Map RCP 6.0",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
+
+Absolute Changes RCP 8.5
+
+```{r, echo=FALSE}
+download_link(
+  link = "https://drive.google.com/file/d/1_x0YpVYGULnZvuDGa0eeifdFbn-9QUov/view?usp=sharing",
+  button_label = "Map RCP 8.5",
+  button_type = "default",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
 
 
 

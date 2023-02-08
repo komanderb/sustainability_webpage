@@ -1,23 +1,39 @@
 ---
-title: "Sustainability Index"
+title: "&#32;"
 output:
   html_document:
     #theme: paper
     toc: False
     #toc_float: true
 ---
+```{css, echo=FALSE}
+h1,h2,h3,h4 {
+  text-align: center;
+}
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+<style>
+body {
+text-align: justify}
+</style>
+
+<center>
+![FigName](website6_bin_cal_dif.jpg)
+</center>
 
 ## A Sustainability Index based on Agricultural Production
 
-<center>
-![FigName](test.jpg)
-</center>
+<br>
 
-We present changs in agricultural production under different climate scenarios for different future periods, if farmers keep harvesting the same crops as today. 
-Moreover the spatial resolution allows to draw conclusions within national and subnational regions. Agricultural Changes dependent on the 
+Climate change poses serious challenges for agricultural communities all over the world. With this project, we present a sustainability index that measures future changes in agricultural productivity for *current* planting patterns under different climate scenarios. For example, the map above
+shows differences of produced calories of the period 2070-2100 compared to today under Representative Concentration Pathway 6.0. As visible in the above map, the spatial resolution of the index shows the unequal distribution of effects on agricultural productivity. This stems from both unequal climatic effects across the globe and differences in planting patterns. 
+
+The motivation for this webpage is to provide early warning to local policy makers. We highlight regions and communities which will suffer significant productivity losses under current planting patterns. Adaptation is a crucial aspect for mediating the economic, social and political repercussions of climate change. Besides, we hope to inspire more important work in the area of agricultural sustainability.
+
+More detailed explanations can be found in the [About](about.html) section. The main focus of this website are the maps presented in the [Maps](map_description.html) section. Here you can find the index under three different climate scenarios, [RCP 2.6](rcp2p6.html), [RCP 6.0](rcp6p0.html) and [RCP 8.5](rcp8p5.html). Any unclear concept or term will be explained in either the [map description](map_description.html) or the [About](about.html) section. 
+
 
 
