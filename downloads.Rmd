@@ -6,11 +6,7 @@ output:
     toc_float: TRUE
   
 ---
-```{css, echo=FALSE}
-h1,h2,h3,h4 {
-  text-align: center;
-}
-```
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
