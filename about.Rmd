@@ -71,7 +71,7 @@ $$\omega_{ist} = \theta_{ist} - \theta_{i} $$
 in the absolute case and 
 $$\omega_{ist} = \frac{\theta_{ist} - \theta_{i}}{\theta_i} $$
 
-For this application we set $c_min$ at 2700 calories per person per day. 
+For this application we set $c_{min}$ at 2700 calories per person per day. 
 
 
 

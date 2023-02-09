@@ -33,7 +33,7 @@ shows differences of produced calories of the period 2070-2100 compared to today
 
 The motivation for this webpage is to provide early warning to local policy makers. We highlight regions and communities which will suffer significant productivity losses under current planting patterns. Adaptation is a crucial aspect for mediating the economic, social and political repercussions of climate change. Besides, we hope to inspire more important work in the area of agricultural sustainability.
 
-More detailed explanations can be found in the [About](about.html) section. The main focus of this website are the maps presented in the [Maps](map_description.html) section. Here you can find the index under three different climate scenarios, [RCP 2.6](rcp2p6.html), [RCP 6.0](rcp6p0.html) and [RCP 8.5](rcp8p5.html). Any unclear concept or term will be explained in either the [map description](map_description.html) or the [About](about.html) section. 
+**The main focus of this website are the maps presented in the [Maps](map_description.html) section. Here you can find the index under three different climate scenarios, [RCP 2.6](rcp2p6.html), [RCP 6.0](rcp6p0.html) and [RCP 8.5](rcp8p5.html)**. Any unclear concept or term will be explained in either the [map description](map_description.html) or the [About](about.html) section. 
 
 
 
