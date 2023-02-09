@@ -28,12 +28,18 @@ text-align: justify}
 
 <br>
 
-Climate change poses serious challenges for agricultural communities all over the world. With this project, we present a sustainability index that measures future changes in agricultural productivity for *current* planting patterns under different climate scenarios. For example, the map above
-shows differences of produced calories of the period 2070-2100 compared to today under Representative Concentration Pathway 6.0. As visible in the above map, the spatial resolution of the index shows the unequal distribution of effects on agricultural productivity. This stems from both unequal climatic effects across the globe and differences in planting patterns. 
+Climate change poses serious challenges for agricultural communities all over the world. With this project, we present a sustainability index that measures future changes in agricultural productivity for *current* planting patterns under different climate scenarios.
+
+**The main focus of this website are the maps presented in the [Maps](map_description.html) section. Here you can find the index under three different climate scenarios, [RCP 2.6](rcp2p6.html), [RCP 6.0](rcp6p0.html) and [RCP 8.5](rcp8p5.html)**. Any unclear concept or term will be explained in either the [map description](map_description.html) or the [About](about.html) section.
 
 The motivation for this webpage is to provide early warning to local policy makers. We highlight regions and communities which will suffer significant productivity losses under current planting patterns. Adaptation is a crucial aspect for mediating the economic, social and political repercussions of climate change. Besides, we hope to inspire more important work in the area of agricultural sustainability.
 
-**The main focus of this website are the maps presented in the [Maps](map_description.html) section. Here you can find the index under three different climate scenarios, [RCP 2.6](rcp2p6.html), [RCP 6.0](rcp6p0.html) and [RCP 8.5](rcp8p5.html)**. Any unclear concept or term will be explained in either the [map description](map_description.html) or the [About](about.html) section. 
+For example, the map above
+shows differences of produced calories of the period 2070-2100 compared to today under Representative Concentration Pathway 6.0. As visible in the above map, the spatial resolution of the index shows the unequal distribution of effects on agricultural productivity. This stems from both unequal climatic effects across the globe and differences in planting patterns. 
+
+
+
+ 
 
 
 
