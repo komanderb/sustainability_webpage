@@ -24,15 +24,19 @@ text-align: justify}
 ![FigName](website6_bin_cal_dif.jpg)
 </center>
 
-## A Sustainability Index based on Agricultural Production
+## Climate Hotspots: A Sustainability Index for Agricultural Production
 
 <br>
 
-Climate change poses serious challenges for agricultural communities all over the world. With this project, we present a sustainability index that measures future changes in agricultural productivity for *current* planting patterns under different climate scenarios.
+The world is facing unprecedented challenges due to climate change, which threatens the long-term sustainability of our food systems. The impacts of climate change are already being felt around the world, but the magnitude and distribution of these impacts are not evenly spread. Mapping the world’s climate hotspots and identifying where the impacts will be the greatest is increasingly important for governments, advocacy groups, and others who need to prioritize resources, set goals, and adapt to a warming world.
 
-**The main focus of this website are the maps presented in the [Maps](map_description.html) section. Here you can find the index under three different climate scenarios, [RCP 2.6](rcp2p6.html), [RCP 6.0](rcp6p0.html) and [RCP 8.5](rcp8p5.html)**. Any unclear concept or term will be explained in either the [map description](map_description.html) or the [About](about.html) section.
+Our website focuses on developing an index of agricultural vulnerability to climate change, which computes the potential damage to agricultural productivity under different climate change scenarios in the period between 2070-2100.  The resulting [sustainability index](map_description.html) is shown in maps which are categorized based on three distinct climate scenarios: [RCP 2.6](rcp2p6.html), [RCP 6.0](rcp6p0.html), and [RCP 8.5](rcp8p5.html). See the [Documentation](about.html) section or [map description](map_description.html) for details.
 
-The motivation for this webpage is to provide early warning to local policy makers. We highlight regions and communities which will suffer significant productivity losses under current planting patterns. Adaptation is a crucial aspect for mediating the economic, social and political repercussions of climate change. At the same time we hope that this project can contribute to understanding the devastating impact that climate change will have locally and the unequal distribution of its damages.
+
+
+We aim to provide a comprehensive assessment of the impact of climate change on global agriculture, using state-of-the-art analytical tools. Our index can be used to identify areas that are particularly vulnerable to climate change, and can be used to prioritize adaptation efforts and allocate resources accordingly.  At the same time we hope that this project can contribute to understanding the devastating impact that climate change will have locally and the unequal distribution of its damages.
+
+We hope that this website will serve as a valuable resource for researchers, policymakers, and anyone who is interested in understanding the impact of climate change on agriculture. We invite you to explore our website and learn more about our work.
 
 For example, the map above
 shows differences of produced calories of the period 2070-2100 compared to today under Representative Concentration Pathway 6.0. As visible in the above map, the spatial resolution of the index shows the unequal distribution of effects on agricultural productivity. This stems from both unequal climatic effects across the globe and differences in planting patterns. 

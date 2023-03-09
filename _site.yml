@@ -1,10 +1,10 @@
 name: "Sustainability Index"                                
 output_dir: "."
 navbar:
-  title: "Sustainability Index"                            
+  title: "Home" # or make it 'left'                      
   type: inverse
   right:
-    - text: "Maps"
+    - text: "Sustainability Index"
       menu: 
       - text: "Description of the maps"
         href: map_description.html
@@ -16,7 +16,7 @@ navbar:
         href: rcp8p5.html
       - text: "Compare across RCP's"
         href: compare_rcp.html
-    - text: "About"
+    - text: "Documentation"
       href: about.html 
     - text: "Downloads"
       href: downloads.html
