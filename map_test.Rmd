@@ -1,0 +1,84 @@
+---
+title: "Test RCP 2.6"
+
+output: html_document
+---
+<style>
+body {
+text-align: justify}
+</style>
+
+```{css, echo=FALSE}
+h1,h2,h3,h4 {
+  text-align: center;
+}
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+RCP 2.6 is a scenario that assumes very aggressive reductions in greenhouse gas emissions, resulting in a relatively low level of warming and minimal sea level rise.
+
+Below you can view the absolute and relative change maps. Check the [Map Description](map_description.html) for information about the creation of the map, especially the creation of the bins.
+
+Note that Change relates to differences between the time period 2070-2100 to today. We express calories in People Fed Yearly (**PFY**)
+
+<br>
+
+```{r, include = F}
+
+#source("main.R", local = TRUE)
+source("leaflet.R", local = TRUE)
+```
+
+```{r, warning=FALSE}
+map1 <- leaflet_function(absolute_tifs[1], "Absolute PFY Change")
+map2 <- leaflet_function(relative_tifs[1], "Growth Rate")
+print(map1)
+print(map2)
+```
+
+```{r, results = 'asis'}
+cat('<button onclick="toggleMaps()">Toggle Maps</button>')
+
+cat('
+<script>
+function toggleMaps() {
+  var map1 = document.getElementById("map1");
+  var map2 = document.getElementById("map2");
+  
+  if (map1.style.display === "none") {
+    map1.style.display = "block";
+    map2.style.display = "none";
+  } else {
+    map1.style.display = "none";
+    map2.style.display = "block";
+  }
+}
+</script>
+')
+
+cat('
+<style>
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+#map1 {
+  display: block;
+}
+
+#map2 {
+  display: none;
+}
+</style>
+')
+
+
+``` 

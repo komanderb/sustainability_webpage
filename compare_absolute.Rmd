@@ -1,0 +1,51 @@
+---
+title: "RCP Comparison"
+output: html_document
+---
+```{css, echo=FALSE}
+h1,h2,h3,h4 {
+  text-align: center;
+}
+```
+
+<style>
+body {
+text-align: justify}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r, include = F}
+
+#source("main.R", local = TRUE)
+source("leaflet.R", local = TRUE)
+```
+
+The binning of the values follows the same concept as before, just across all RCP's together for the maps below. 
+
+<br>
+
+### Absolute Change under RCP 2.6
+<br>
+```{r, echo = F, warning = F, out.width = "100%"}
+leaflet_function(compare_tifs[1], "Absolute PFY Change")
+```
+
+<br> 
+
+### Absolute Change under RCP 6.0
+<br>
+```{r, echo = F, warning = F, out.width = "100%"}
+leaflet_function(compare_tifs[2], "Absolute PFY Change")
+```
+
+<br> 
+
+### Absolute Change under RCP 8.5
+<br>
+```{r, echo = F, warning = F, out.width = "100%"}
+leaflet_function(compare_tifs[3], "Absolute PFY Change")
+```

@@ -1,0 +1,34 @@
+---
+title: "RCP 8.5 Relative Change"
+---
+```{css, echo=FALSE}
+h1,h2,h3,h4 {
+  text-align: center;
+}
+```
+
+<style>
+body {
+text-align: justify}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include = F}
+
+#source("main.R", local = TRUE)
+source("leaflet.R", local = TRUE)
+```
+
+RCP 8.5 is a scenario that assumes very little reduction in greenhouse gas emissions, resulting in a high level of warming and significant sea level rise.
+
+Below you can view the absolute and relative change maps. Check the [Map Description](map_description.html) for information about the creation of the map, especially the creation of the bins. 
+Note that Change relates to differences between the time period 2070-2100 to today. We express calories in People Fed Yearly (**PFY**)
+
+<br>
+
+
+```{r, echo = F, warning = F, out.width="100%"}
+leaflet_function(relative_tifs[3], "Growth Rate")

@@ -1,0 +1,37 @@
+---
+title: "RCP 6.0 Absolute Change"
+
+output: html_document
+---
+<style>
+body {
+text-align: justify}
+</style>
+
+```{css, echo=FALSE}
+h1,h2,h3,h4 {
+  text-align: center;
+}
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+RCP 6.0 is a scenario that assumes moderate reductions in greenhouse gas emissions, resulting in a moderate level of warming and moderate sea level rise.
+
+Below you can view the absolute and relative change maps. Check the [Map Description](map_description.html) for information about the creation of the map, especially the creation of the bins. 
+Note that Change relates to differences between the time period 2070-2100 to today. We express calories in People Fed Yearly (**PFY**)
+
+<br>
+
+```{r, include = F}
+
+#source("main.R", local = TRUE)
+source("leaflet.R", local = TRUE)
+```
+
+```{r, echo = F, warning = F, out.width = "100%"}
+leaflet_function(absolute_tifs[2], "Absolute PFY Change")
+```

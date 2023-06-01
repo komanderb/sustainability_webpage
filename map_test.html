@@ -11,7 +11,7 @@
 
 
 
-<title> </title>
+<title>Test RCP 2.6</title>
 
 <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,9 +29,6 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -222,69 +219,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
 
 </head>
 
@@ -292,16 +226,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -360,7 +284,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore"> </h1>
+<h1 class="title toc-ignore">Test RCP 2.6</h1>
 
 </div>
 
@@ -369,44 +293,92 @@ div.tocify {
 body {
 text-align: justify}
 </style>
-<div id="about-the-project" class="section level2">
-<h2>About the project</h2>
-<p>Climate change poses serious challenges for agricultural communities all over the world. In this project we use the data provided by the GAEZ project to provide benchmark estimates for the damage done to overall agricultural productivity. This is particularly relevant for low-income regions and communities which will have a hard time adapting to falling productivity through changes in technology or crop type.</p>
-<p>The motivation for this webpage is to provide early warning to local policy makers. We highlight regions and communities which will suffer significant productivity losses under current planting patterns. Adaptation is a crucial aspect for mediating the economic, social and political repercussions of climate change.</p>
-<p>At the same time we hope that this project can contribute to understanding the devastating impact that climate change will have locally and the unequal distribution of its damages. This should inform both efforts of preventing climate change and political negotiations for compensating the losers from the remaining change.</p>
-</div>
-<div id="about-the-data" class="section level2">
-<h2>About the data</h2>
-<p>For a full overview of the methodology, check out the <a href="downloads.html">model documentation</a>. Essentially for cell i, we have the harvesting area of crop c under water conditions w (either rainfed or irrigated) denoted as <span class="math inline">\(har_{icw}\)</span>. The data is taken from <a href="https://gaez.fao.org/">GAEZv4</a> for the year 2010. Moreover GAEZv4 provides data on the agro-climatic potential yield for crop <em>c</em> in cell <em>i</em> for today (observed) and future time periods (estimated). For future time periods the estimation/simulation is subject to the assumed climatic conditions of one of the four Relative Concentration Pathways. Thus agro-climatic potential yield is defined as <span class="math inline">\(\gamma_{icw}\)</span> for todays production and as <span class="math inline">\(\gamma_{icwst}\)</span> for future production where s denotes the RCP and t the time period.</p>
-<p>In order to compare future scenarios with todays production, we multiply the harvesting area of crop c in cell i with the corresponding agro-climatic yield for crop c in cell i</p>
-<p><span class="math display">\[ \theta_{icwst} = \gamma_{icwst} \times har_{icw} \]</span></p>
-<p>Note that the agro-climatic yield differs from the actual production, widely discussed under yield gaps. Also the construction of <span class="math inline">\(\theta_{icwst}\)</span> shows the two major assumptions of our approach</p>
-<ol style="list-style-type: decimal">
-<li>High Input Management Assumption</li>
-<li>Constant harvesting area, i.e. no crop adaptation</li>
-</ol>
-<p>The first assumption is predetermined by the agro-climatic potential yield data. It assumes high input management. As this assumptions holds for today’s and future data, it cancels out, allowing a focus on just the changes of climatic conditions and the effect on agricultural productivity. Denoted constant technology in <em>Economic Terms</em> , we assume that the farming technology and agricultural inputs remain the same over time. Highly unrealistic, but this allows the focus on the effect of climatic changes.</p>
-<p>The second assumption can be described as <em>no adaptation of crops</em>, i.e. farmers don’t change their set of crops with changing climatic conditions. Theoretically this is a very limiting assumptions, as varying climatic conditions might change in favor to certain crops for specific regions, which make them easier to grow etc.. Yet this again allows to identify regions that <em>will</em> have to adapt the most or benefit the most, as their current composition of harvested crops is unsuitable/suitable.</p>
-<p>In order to compare cells with different produced crops, we then aggregate crops in each cell by their caloric yield <span class="math inline">\(ca_c\)</span>.</p>
-<p><span class="math display">\[ \theta_{iwst} = \sum_{c = 1}^{C} \theta_{icwst} \times ca_c \]</span></p>
-</div>
-<div id="about-the-maps" class="section level2">
-<h2>About the maps</h2>
-<p>The maps (visible here!) show either the absolute change in calories or the growth rate of calories, where calories are expressed in people fed yearly (PFY): <span class="math display">\[\frac{\theta_{iwst}}{365 * c_{min}}\]</span> where <span class="math inline">\(c_{min}\)</span> is calories needed per person per day. After summing the water supply types, the change measure <span class="math inline">\(\omega\)</span> is defined as:</p>
-<p><span class="math display">\[\omega_{ist} = \theta_{ist} - \theta_{i} \]</span> in the absolute case and <span class="math display">\[\omega_{ist} = \frac{\theta_{ist} - \theta_{i}}{\theta_i} \]</span></p>
-<p>For this application we set <span class="math inline">\(c_{min}\)</span> at 2700 calories per person per day.</p>
-</div>
-<div id="useful-links" class="section level2">
-<h2>Useful links</h2>
-<p>Most of the data is taken from the <a href="https://gaez.fao.org/">GAEZv4</a>. Check out their model documentation for detailed information</p>
-<p>For the sources of additional data, like caloric conversion of crop types data, consult our model documentation.</p>
-<p><em>Work in Progress</em></p>
-</div>
+<style type="text/css">
+h1,h2,h3,h4 {
+  text-align: center;
+}
+</style>
+<p>RCP 2.6 is a scenario that assumes very aggressive reductions in greenhouse gas emissions, resulting in a relatively low level of warming and minimal sea level rise.</p>
+<p>Below you can view the absolute and relative change maps. Check the <a href="map_description.html">Map Description</a> for information about the creation of the map, especially the creation of the bins.</p>
+<p>Note that Change relates to differences between the time period 2070-2100 to today. We express calories in People Fed Yearly (<strong>PFY</strong>)</p>
+<p><br></p>
+<pre class="r"><code>map1 &lt;- leaflet_function(absolute_tifs[1], &quot;Absolute PFY Change&quot;)
+map2 &lt;- leaflet_function(relative_tifs[1], &quot;Growth Rate&quot;)
+print(map1)
+print(map2)</code></pre>
+<pre class="r"><code>cat(&#39;&lt;button onclick=&quot;toggleMaps()&quot;&gt;Toggle Maps&lt;/button&gt;&#39;)</code></pre>
+<button onclick="toggleMaps()">
+Toggle Maps
+</button>
+<pre class="r"><code>cat(&#39;
+&lt;script&gt;
+function toggleMaps() {
+  var map1 = document.getElementById(&quot;map1&quot;);
+  var map2 = document.getElementById(&quot;map2&quot;);
+  
+  if (map1.style.display === &quot;none&quot;) {
+    map1.style.display = &quot;block&quot;;
+    map2.style.display = &quot;none&quot;;
+  } else {
+    map1.style.display = &quot;none&quot;;
+    map2.style.display = &quot;block&quot;;
+  }
+}
+&lt;/script&gt;
+&#39;)</code></pre>
+<script>
+function toggleMaps() {
+  var map1 = document.getElementById("map1");
+  var map2 = document.getElementById("map2");
+  
+  if (map1.style.display === "none") {
+    map1.style.display = "block";
+    map2.style.display = "none";
+  } else {
+    map1.style.display = "none";
+    map2.style.display = "block";
+  }
+}
+</script>
+<pre class="r"><code>cat(&#39;
+&lt;style&gt;
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+#map1 {
+  display: block;
+}
+
+#map2 {
+  display: none;
+}
+&lt;/style&gt;
+&#39;)</code></pre>
+<style>
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+#map1 {
+  display: block;
+}
+
+#map2 {
+  display: none;
+}
+</style>
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -439,35 +411,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
-    $('.unlisted.unnumbered').addClass('toc-ignore')
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
