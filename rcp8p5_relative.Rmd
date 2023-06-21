@@ -24,7 +24,7 @@ source("leaflet.R", local = TRUE)
 
 RCP 8.5 is a scenario that assumes very little reduction in greenhouse gas emissions, resulting in a high level of warming and significant sea level rise.
 
-Below you can view the absolute and relative change maps. Check the [Map Description](map_description.html) for information about the creation of the map, especially the creation of the bins. 
+Below you can view the absolute and relative change maps. Check the [Map Description](index.html) for information about the creation of the map, especially the creation of the bins. 
 Note that Change relates to differences between the time period 2070-2100 to today. We express calories in People Fed Yearly (**PFY**)
 
 <br>

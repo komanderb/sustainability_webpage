@@ -1,39 +1,43 @@
 name: "Sustainability Index"                                
 output_dir: "."
 navbar:
-  title: "Home" # or make it 'left'                      
+  title: "Home"  # or make it 'left'
   type: inverse
   right:
-    - text: "Sustainability Index"
-      menu: 
-      - text: "Description of the maps"
-        href: map_description.html
-      - text: "RCP 2.6"
-        menu:
-        - text: "Absolute Change"
-          href: rcp2p6_absolute.html
-        - text: "Relative Change"
-          href: rcp2p6_relative.html
-      - text: "RCP 6.0"
-        menu:
-        - text: "Absolute Change"
-          href: rcp6p0_absolute.html
-        - text: "Relative Change"
-          href: rcp6p0_relative.html
+    #- text: "Sustainability Index"
+    #  menu: 
+     # - text: "Description of the maps"
+      #  href: map_description.html
+    - text: "RCP 2.6"
+      menu:
+      - text: "Absolute Change"
+        href: rcp2p6_absolute.html
+      - text: "Relative Change"
+        href: rcp2p6_relative.html
+    - text: "RCP 6.0"
+      menu:
+      - text: "Absolute Change"
+        href: rcp6p0_absolute.html
+      - text: "Relative Change"
+        href: rcp6p0_relative.html
           
-      - text: "RCP 8.5"
-        menu:
-        - text: "Absolute Change"
-          href: rcp8p5_absolute.html
-        - text: "Relative Change"
-          href: rcp8p5_relative.html
+    - text: "RCP 8.5"
+      menu:
+      - text: "Absolute Change"
+        href: rcp8p5_absolute.html
+      - text: "Relative Change"
+        href: rcp8p5_relative.html
           
-      - text: "Compare across RCP's"
-        href: compare_rcp.html
-    - text: "Documentation"
-      href: about.html 
-    - text: "Downloads"
-      href: downloads.html
+    - text: "Compare across RCP's"
+      href: compare_rcp.html
+      
+    - text: "Back to Page"
+      href: http://economic-development-ml.iae-csic.org/index_may23.html
+      
+    #- text: "Documentation"
+    #  href: about.html 
+    #- text: "Downloads"
+      #href: downloads.html
     
     
 output:

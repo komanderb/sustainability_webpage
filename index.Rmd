@@ -21,29 +21,80 @@ text-align: justify}
 </style>
 
 <center>
-![FigName](website6_bin_cal_dif.jpg)
+![FigName](compare_rcp6p0.jpg)
 </center>
 
 ## Climate Hotspots: A Sustainability Index for Agricultural Production
 
+For each RCP we offer maps for absolute and relative changes.
+Regardless of the RCP, the maps cover only one future time period, 2070-2100.
+Read more on the creation of the data in the [About](http://economic-development-ml.iae-csic.org/index_may23.html) section. 
+
 <br>
 
-The world is facing unprecedented challenges due to climate change, which threatens the long-term sustainability of our food systems. The impacts of climate change are already being felt around the world, but the magnitude and distribution of these impacts are not evenly spread. Mapping the world’s climate hotspots and identifying where the impacts will be the greatest is increasingly important for governments, advocacy groups, and others who need to prioritize resources, set goals, and adapt to a warming world.
+### About the RCP's
+Representative Concentration Pathways', RCP 2.6, RCP 6.0 and RCP 8.5 are scenarios developed by the Intergovernmental Panel on Climate Change (IPCC) to project future greenhouse gas emissions and resulting changes in temperature and sea level.
 
-Our website focuses on developing an index of agricultural vulnerability to climate change, which computes the potential damage to agricultural productivity under different climate change scenarios in the period between 2070-2100.  The resulting [sustainability index](map_description.html) is shown in maps which are categorized based on three distinct climate scenarios: [RCP 2.6](rcp2p6.html), [RCP 6.0](rcp6p0.html), and [RCP 8.5](rcp8p5.html). See the [Documentation](about.html) section or [map description](map_description.html) for details.
+**RCP 2.6**: This scenario assumes very aggressive reductions in greenhouse gas emissions, primarily through the use of renewable energy sources and carbon capture and storage technology. It also assumes significant changes in land use, such as afforestation and reforestation, to sequester carbon. This scenario results in a peak in global greenhouse gas emissions by 2020 and a reduction of about 85% below 2000 levels by 2100.
 
+**RCP 6.0**: This scenario assumes moderate reductions in greenhouse gas emissions, primarily through the use of renewable energy sources and carbon capture and storage technology. It also assumes a moderate increase in energy efficiency, and some changes in land use to sequester carbon. This scenario results in a peak in global greenhouse gas emissions around 2040 and a reduction of about 35% below 2000 levels by 2100.
 
+**RCP 8.5**: This scenario assumes very little reduction in greenhouse gas emissions, with no significant changes in energy or land-use policy. It assumes high population growth and a high rate of economic growth, leading to a large increase in energy demand, primarily met by fossil fuels. This scenario results in a continued increase in global greenhouse gas emissions throughout the century, with emissions being about four times higher than in 2000 by 2100.
 
-We aim to provide a comprehensive assessment of the impact of climate change on global agriculture, using state-of-the-art analytical tools. Our index can be used to identify areas that are particularly vulnerable to climate change, and can be used to prioritize adaptation efforts and allocate resources accordingly.  At the same time we hope that this project can contribute to understanding the devastating impact that climate change will have locally and the unequal distribution of its damages.
+It's worth noting that these are scenarios, not predictions, and that there is a range of possible outcomes depending on how much and how soon the world takes action to reduce emissions.
 
-We hope that this website will serve as a valuable resource for researchers, policymakers, and anyone who is interested in understanding the impact of climate change on agriculture. We invite you to explore our website and learn more about our work.
+<br>
 
-For example, the map above
-shows differences of produced calories of the period 2070-2100 compared to today under Representative Concentration Pathway 6.0. As visible in the above map, the spatial resolution of the index shows the unequal distribution of effects on agricultural productivity. This stems from both unequal climatic effects across the globe and differences in planting patterns. 
+### Creation of Bins
 
+Due to the large span of values, we created manual bins for the plots presented on this webpage, based on the distribution of the values. 
+The following concept is applied:
+Depending on the distribution take all negative (positive) values and create bins, excluding 0 change: 
 
+* Bin 1: Percentile 95 - 100
+* Bin 2: Percentile 90 - 95 
+* Bin 3: Percentile 90 - 70
+* Bin 4: Percentile 70 - 50
+* Bin 5: Percentile 50 - 0
 
- 
+Then assign positive (negative) values to the cutoffs of the created bins with turning sign. For the relative change, the bin concept is applied separately for both negative and positive value.
 
+For example, the absolute Change in Calories under RCP 6.0: We bin the negative values according to above concept, and assign positive values to the bins positive cutoff. Note that in this plot, values are logged _after_ the creation of bins for visualization purposes. 
+
+```{r, include = F}
+
+source("main.R", local = TRUE)
+```
+<center>
+```{r, echo=FALSE, warning=FALSE}
+
+df$log_change <- if_else(df$changecal_rcp6p0 > 0, log(df$changecal_rcp6p0), 
+                         - log(abs(df$changecal_rcp6p0)))
+
+my_color <- cmocean(name = 'curl', direction = -1, clip = 0.1)(11)
+my_color <- my_color[-6]
+sort_values <- sort(unique(round(df$bin_change_rcp6p0)))
+sort_values <- sort_values[-6]
+names(my_color) <- as.character(sort_values)
+ggplot(df, aes(x = log_change, fill = as.character(round(bin_change_rcp6p0)))) +
+  geom_histogram(alpha = 0.7, bins = 200) +
+  scale_fill_manual(values = my_color, name = "Bin",
+                    labels = sort_values)  +
+  labs(x = "Logged Change", 
+       y= "Count", 
+       title = "Making bins based on distribution", 
+       subtitle = "Logged absolute change of calories produced under RCP 6.0") +
+  theme_hc() +
+  theme(
+    plot.title = element_text(hjust = 0.5, color = "#4e4d47"),
+    plot.subtitle = element_text(hjust = 0.5, color = "#4e4d47"))
+```
+</center>
+
+<br>
+
+### Other issues
+
+It is important that the grid of the map is *not* normalized by grid cell area. The spacing of the grid is a constant in degrees, which leads to different sized cells depending on the latitude. 
 
 

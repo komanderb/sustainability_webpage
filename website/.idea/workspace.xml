@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="928e9879-221e-40b9-9056-a2bc08342025" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/8923AF8B/pcs/source-pane.pper" beforeDir="false" afterPath="$PROJECT_DIR$/../.Rproj.user/8923AF8B/pcs/source-pane.pper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/8923AF8B/pcs/source-window.pper" beforeDir="false" afterPath="$PROJECT_DIR$/../.Rproj.user/8923AF8B/pcs/source-window.pper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/8923AF8B/pcs/windowlayoutstate.pper" beforeDir="false" afterPath="$PROJECT_DIR$/../.Rproj.user/8923AF8B/pcs/windowlayoutstate.pper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/8923AF8B/rmd-outputs" beforeDir="false" afterPath="$PROJECT_DIR$/../.Rproj.user/8923AF8B/rmd-outputs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2OESp54j5dCGZ3zcvmVHcPJ0eRG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lenovo/Documents/GitHub/sustainability_webpage/website&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="928e9879-221e-40b9-9056-a2bc08342025" name="Changes" comment="" />
+      <created>1681124428073</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681124428073</updated>
+      <workItem from="1681124429291" duration="663000" />
+      <workItem from="1681306872075" duration="11000" />
+      <workItem from="1681838804839" duration="1789000" />
+      <workItem from="1681890413306" duration="605000" />
+      <workItem from="1685364879034" duration="1508000" />
+      <workItem from="1685635539199" duration="643000" />
+      <workItem from="1686740987566" duration="46000" />
+      <workItem from="1686834045790" duration="21000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

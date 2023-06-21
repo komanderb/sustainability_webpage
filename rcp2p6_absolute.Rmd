@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 RCP 2.6 is a scenario that assumes very aggressive reductions in greenhouse gas emissions, resulting in a relatively low level of warming and minimal sea level rise.
 
-Below you can view the absolute and relative change maps. Check the [Map Description](map_description.html) for information about the creation of the map, especially the creation of the bins.
+Below you can view the absolute and relative change maps. Check the [Map Description](index.html) for information about the creation of the map, especially the creation of the bins.
 
 Note that Change relates to differences between the time period 2070-2100 to today. We express calories in People Fed Yearly (**PFY**)
 
